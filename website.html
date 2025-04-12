@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5gRwx6KHyQWw9wfKwTFcY2YWlsa2tp4ZJ4BiYd0DElNt96l0-gFB42nAodTihztJss0M&usqp=CAU');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .navitem {
+    color: white;
+    text-decoration: none;
+    border-style: solid;
+    border-color: green;
+    padding: 5px;
+}
+        html {
+  scroll-behavior: smooth;
+}
+        header {
+            background-color: rgba(88, 87, 89, 0.686);
+            color: #e2dfdf;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+        #logo {
+            max-width: 500px;
+            margin-top: 40px;
+        }
+        header img {
+            position: absolute;
+            left: 500px;
+            top: 60%;
+            padding: 40px;
+            transform: translateY(-50%);
+            height: 80px;
+        }
+
+        nav {
+            background-color: rgba(229, 66, 66, 0.9);
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .section {
+            padding: 40px;
+            background-color: rgba(234, 229, 229, 0.8);
+            margin: 20px;
+            border-radius: 10px;
+        }
+        .section h2 {
+            margin-top: 0;
+            color: #110a0a;
+        }
+        .section h3 {
+            margin-top: 0;
+            color: #1f1d1d;
+        }
+        .section h4 {
+            margin-top: 0;
+            color: #3119cd;
+        }
+        .section h5 {
+            margin-top: 0;
+            color: #3c3939;
+        }
+        .section p {
+            line-height: 1.5;
+            color: rgb(22, 21, 21);
+            .navitem {
+    color: white;
+    text-decoration: none;
+    border-style: solid;
+    border-color: green;
+    padding: 5px;
+}
+        }
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            margin-top: 30px;
+            color: rgb(188, 36, 188);
+        }
+        .stats h3 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        .stats p {
+            font-size: 18px;
+            color: #d90808;
+            .navitem {
+    color: white;
+    text-decoration: none;
+    border-style: solid;
+    border-color: green;
+    padding: 5px;
+}
+        }
+        #academics {
+            background-color: rgba(227, 228, 235, 0.9);
+            text-align:center;
+            font-size: large;
+            .navitem {
+    color: white;
+    text-decoration: none;
+    border-style: solid;
+    border-color: green;
+    padding: 5px;
+}           
+        }   
+        #admissions {
+            background-color: rgba(227, 228, 235, 0.9);
+            
+            font-size: large;
+        }
+        #campus-life{
+            background-color: rgba(227, 228, 235, 0.9);
+        
+            font-size: large;
+        } 
+        #home{
+            background-color: rgba(227, 228, 235, 0.9);
+        
+            font-size: large;
+        }
+        #about{
+            background-color: rgba(227, 228, 235, 0.9);
+        
+            font-size: large;
+        }
+        #Contact{
+            background-color: rgba(227, 228, 235, 0.9);
+        
+            font-size: large;
+        }
+        #Queries{
+            background-color: rgba(227, 228, 235, 0.9);
+        
+            font-size: large;
+        }
+        #Chat-container{
+            background-color: rgba(227, 228, 235, 0.9);
+        
+            font-size: large;
+        }
+        form {
+            max-width: 900px;
+            margin: 0 auto;
+            color: #141313;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 30px;
+            border: 1px solid #bb3e3e;
+            border-radius: 9px;
+        }
+
+        .cta-button {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            align-items:center;
+        }
+        #chat-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: rgba(184, 59, 188, 0.9);
+            border-radius: 9px;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(29, 28, 28, 0.1);
+            text-align: left;
+        }
+        #chatbox {
+            height: 400px;
+            overflow-y: scroll;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #9985f2;
+            border-radius: 4px;
+            background-color: #1010d9;
+        }
+       #inputBox {
+            display: flex;
+            align-items: center;
+        }
+        #userInput {
+            flex: 4;
+            padding: 40px;
+            margin-right: 10px;
+            border: 1px solid #f56b6b;
+            border-radius: 8px;
+        }
+        #sendButton {
+            padding: 10px 20px;
+            background-color: #23db2a;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .user-message {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 8px;
+            margin: 5px 0;
+            border-radius: 5px;
+            align-self: flex-end;
+            max-width: 70%;
+            word-wrap: break-word;
+        }
+        .chatbot-message {
+            background-color: #1E90FF;
+            color: #fff;
+            padding: 8px;
+            margin: 5px 0;
+            border-radius: 8px;
+            align-self: flex-start;
+            max-width: 70%;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body> 
+  <header>
+    <img src="https://www.bitsathy.ac.in/wp-content/themes/baiotsathycollege/assets/images/header%2006.png">   
+    "Life @ BIT"  
+    <h1>College Website</h1>
+  </header>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>   
+    <a href="#academics">Academics</a>
+    <a href="#admissions">Admissions</a>
+    <a href="#campus-life">Campus Life</a>    
+    <a href="#Contact">Contact</a>
+    <a href="#Queries">Quires</a>
+    <a href="#chat-container">Chat-container</a>
+    <a href="#willing-to-admission">Willing-To-Admission</a>
+  </nav>
+  <div id="home" class="section">
+    <div class="content-wrapper">
+      <div class="content-left">
+        <h1>Welcome to Our College</h1>
+        <p>Discover the best education experience</p>
+      </div>
+      <div class="content-right">
+        <img src="https://tneacounselling.in/wp-content/uploads/2022/08/Bannari-Amman-Institute-of-Technology-Erode.jpg" alt="College Campus">
+      </div>
+    </div>
+  </div>  
+  <style>
+    .section {
+      padding: 80px 0;
+      
+    }
+     .content-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    } 
+    .content-left {
+      flex-basis: 50%;
+      padding-right: 45px;
+    } 
+    .content-right {
+      flex-basis: 50%;
+      text-align: right;
+    } 
+    .content-right img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+  <div id="about" class="section">    
+    <h2>About Our College</h2>
+    <p>Founded in 1985, our college has a rich history of providing high-quality education to students from diverse backgrounds. We are committed to fostering a supportive and inclusive learning environment that empowers our students to reach their full potential.</p>
+    <div class="stats">
+      <div>
+        <h3>10,000+</h3>
+        <p>Students</p>
+      </div>
+      <div>
+        <h3>500+</h3>
+        <p>Faculty</p>
+      </div>
+      <div>
+        <h3>100+</h3>
+        <p>Programs</p>
+      </div>
+    </div>
+  </div>
+  <div id="academics" class="section">
+    <h2>Academic Programs</h2>
+    <p>Our college offers a wide range of academic programs across various disciplines, including business, engineering, humanities, sciences, and more. Whether you're interested in pursuing a bachelor's, master's, or doctoral degree, we have the programs to help you achieve your educational goals.</p>
+  </div>
+  <div id="admissions" class="section">
+    <h2>Admissions</h2>
+    <p> We welcome applications from students who are passionate about learning and eager to contribute to our vibrant campus community. Our admissions process is designed to evaluate each applicant holistically, considering factors such as academic performance, extracurricular involvement, and personal statements.</p>
+  </div>
+
+  <div id="campus-life" class="section">
+    <h2>Campus Life</h2>
+    <p> Bannari Amman Institute of Technology is an Autonomous, Self-financing Engineering College, Approved by AICTE, New Delhi and Affiliated to Anna University, Chennai. Nestled on the banks of The River Bhavani, BIT campus provides environment for learning in harmony with nature, away from the odds of the city life. The spacious and the earth hugging buildings punctuated with landscaped courtyards and pathways are designed to emphasise the business ethics and or characteristics of an excellent centre for learning. The Campus hosts well planned academic blocks, computer centres, lecture halls, libraries, laboratories, conference halls, staff quarters, hostels and students' centres. The Campus also houses a co-operative store, ATM (Axis, SBI and KVB) and a clinic to attend to the general health of the students and staff.At our college, we believe that the student experience extends beyond the classroom. Our campus offers a variety of clubs, organizations, and recreational activities to help you explore your interests, develop new skills, and build lasting relationships with your peers.</p>
+    <li>
+      <h3>Campus Tour</h3>
+      <a href="https://campustour.bitsathy.ac.in/">https://campustour.bitsathy.ac.in/</a>
+      </li>
+    <div class="content-right">
+      <img src="https://www.bitsathy.ac.in/wp-content/uploads/2022/09/learning-centre-5.webp">
+    </div>
+    <div class="content-left">
+      <img src="https://media.getmyuni.com/azure/college-image/big/bannari-amman-institute-of-technology-bait-coimbatore.jpg">
+    </div>
+    <div class="content-right">
+      <img src="https://images.collegedunia.com/public/college_data/images/campusimage/1597642998AIS_0527.JPG?mode=stretch">
+    </div>
+     
+  </div>
+  <div id="Queries" class="section">
+    <h2> Queries</h2>
+    <p> We're here to answer your questions and provide you with the information you need. Feel free to reach out to us using the contact form below, and we'll be in touch as soon as possible.</p>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+      <button type="submit" class="cta-button">Send Message</button>
+    </form>
+  </div>
+  </div>
+  <div id="Contact" class="section">
+    <h2>Contact</h2>
+    <p>Get in touch with us for more information or to discuss your needs.</p>
+    <ul>
+      <li>
+        <h3>Address</h3>
+        <div class="content-left">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5KHXaQL1kRxJytd5kdL4_EbVP1mY6cEnB-K9vAirqE2o6s4x3UBdElz4mi8D2jqmgdtI&usqp=CAU">
+        </div>
+        <p> BANNARI AMMAN INSTITUTE OF TECHNOILOGY <br>Sathy - Bhavani State Highway, Alathukombai, Post, Sathyamangalam, Tamil Nadu 638401
+         </p>
+      </li>
+      <li>
+        <h3>Phone</h3>
+        <p>+1 (999) 999-9999</p>
+      </li>
+      <li>
+        <h3>Email</h3>
+        <a href="arunjothi.cs22@bitsathy.ac.in">arunjothi.cs22@bitsathy.ac.in</a>
+      </li>
+      <li>
+      <h3>Direction</h3>
+      <a href="https://www.waze.com/live-map/directions/in/tn/sathyamangalam/bannari-amman-institute-of-technology?to=place.ChIJ-SgbbV0hqTsRGuvP36dGifQ">MAP</a>
+      </li>   
+    </ul>
+    <div class="social-links">
+      <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </div>
+  <div id="chat-container">
+    <h2>Chat with our Virtual Assistant</h2>
+    <div id="chatbox"></div>
+    <div id="inputBox">
+      <input type="text" id="userInput" placeholder="Type your message...">
+      <button id="sendButton" onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+  <!DOCTYPE html>
+<html>
+<head>
+  <title>Student Admission - Bannari Amman Institute of Technology</title>
+  <div id="willing-to-admission">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    nav {
+      background-color: #f4d0d0;
+      padding: 20px;
+      text-align: center;
+    }
+    nav a {
+      color: #100f0f;
+      text-decoration:double;
+      padding: 10px;
+      margin: 0 10px;
+    }
+    nav a:hover {
+      background-color: #12cb4a;
+      color: rgb(218, 23, 23);
+    }
+    main {
+      padding: 20px;
+    }
+     h2 {
+      color: #e9e3e3;
+      text-align: center;
+    }
+    h1 {
+      color: #191a19;
+     
+    }
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      border: 8px solid #f41abe;
+      padding: 20px;
+      border-radius: 9px;
+    }
+    label,
+    label {
+      display: block;
+      margin-top: 10px;
+      color: rgb(9, 227, 20);
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #2de016;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #3c12f5;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 9px;
+      cursor: pointer;
+      margin-top: 20px;
+      justify-content:left;
+
+    }
+   button:hover {
+      background-color: #31c410;
+    }
+    .logo {
+      display: flex;
+      justify-content:center;
+      margin-bottom: 30px;
+    }
+    .logo img {
+      max-width: 200px;
+    }
+  </style>
+</head>
+<body>
+  <header>   
+    <h1>Bannari Amman Institute of Technology</h1>
+    <p> Bannari Amman Institute of Technology<br>Student Admission</p>
+  </header>
+  <nav>
+    <a style="scroll-behavior: smooth;" href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#academics">Academics</a>
+    <a href="#admission">Admissions</a>
+    <a href="#campus-life">Campus Life</a>
+    <a href="#Contact">Contact</a>
+  </nav>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admission Application</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .logo {
+      text-align: center;
+      margin-bottom: 20px;
+      width: 100%
+    }
+    html {
+  scroll-behavior: smooth;
+}
+   form {
+      max-width: 400px;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #cc21c7;
+      border-radius: 50px;
+    }
+    label, input, select {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: rgb(235, 229, 229);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .confirmation {
+      max-width: 400px;
+      margin: 20px auto;
+      padding: 20px;
+      border: 1px solid #4CAF50;
+      border-radius: 10px;
+      background-image: url('https://static.vecteezy.com/system/resources/thumbnails/004/427/015/small_2x/blue-background-with-geometric-accent-free-vector.jpg');
+      background-size: cover;
+     background-attachment: fixed;
+      background-color: #ea353b;
+      background-size: cover;
+      background-repeat: no-repeat;
+      color: rgb(20, 19, 19);
+      
+    }    
+  </style>
+</head>
+<body>
+  
+<main>
+  <div class="logo">
+    <img src="https://www.bitsathy.ac.in/wp-content/themes/baiotsathycollege/assets/images/header%2006.png" alt="Bannari Amman Institute of Technology Logo">
+  </div>
+  <h2>Apply for Admission</h2>
+  <form id="admissionForm" onsubmit="submitForm(event)">
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required>
+
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob" required>
+
+    <label for="program">Program:</label>
+    <select id="program" name="program" required>
+      <option value="">Select a program</option>
+      <option value="be">B.E</option>
+      <option value="btech">B.Tech</option>
+      <option value="mtech">M.Tech</option>
+      <option value="mba">MBA</option>
+      <option value="mca">MCA</option>
+    </select>
+
+    <label for="stream">Stream:</label>
+    <select id="stream" name="stream" required>
+      <option value="">Select a stream</option>
+      <option value="cse">Computer Science and Engineering</option>
+      <option value="ece">Electronics and Communication Engineering</option>
+      <option value="eee">Electrical and Electronics Engineering</option>
+      <option value="mechanical">Mechanical Engineering</option>
+      <option value="civil">Civil Engineering</option>
+    </select>
+
+    <label for="qualification">Highest Qualification:</label>
+    <input type="text" id="qualification" name="qualification" required>
+
+    <label for="marks">Marks Secured (%):</label>
+    <input type="number" id="marks" name="marks" min="0" max="100" required>
+
+    <button type="submit">Apply Now</button>
+  </form>
+  <div id="confirmation" class="confirmation" style="display:none;"></div>
+</main>
+
+<script>
+  function submitForm(event) {
+    event.preventDefault();
+
+    // Gather form data
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const dob = document.getElementById('dob').value;
+    const program = document.getElementById('program').value;
+    const stream = document.getElementById('stream').value;
+    const qualification = document.getElementById('qualification').value;
+    const marks = document.getElementById('marks').value;
+
+    // Create confirmation letter content
+    const confirmationContent = `
+      <div style="text-align: center; margin-bottom: 20px;">
+        
+        <img src="https://timess3spore.s3.amazonaws.com/ndata/candidateV2/Bannari/2022/07/06/1657112969.webp">
+      </div>
+      <h2 style="color: #fff;">Confirmation Letter</h2>
+     <p style="color: #fff;">Dear ARUNJOTHI V,</p>
+<p style="color: #fff;">Thank you for applying to Bannari Amman Institute of Technology.</p>
+<p><strong>Application Details:</strong></p>
+      <ul>
+        <li><strong>Email:</strong>arunjothi.cs22@bitsathy.ac.in</li>
+        <li><strong>Phone:</strong> ${phone}</li>
+        <li><strong>Date of Birth:</strong> ${dob}</li>
+        <li><strong>Program:</strong> ${program}</li>
+        <li><strong>Stream:</strong> ${stream}</li>
+        <li><strong>Highest Qualification:</strong> ${qualification}</li>
+        <li><strong>Marks Secured:</strong> ${marks}%</li>
+      </ul>
+      <p style="color: #fff;">We will review your application and get back to you shortly.</p>
+      <p style="color: #fff;">Best regards,</p>
+      <p style="color: #fff;">Bannari Amman Institute of Technology</p>
+    `;
+
+    // Display confirmation letter
+    const confirmationDiv = document.getElementById('confirmation');
+    confirmationDiv.innerHTML = confirmationContent;
+    confirmationDiv.style.display = 'block';
+  }
+</script>
+
+</body>
+</html>
+
+</body>
+</html>
+  <script>
+    
+    const responses = {
+      "hello": ["Hello!", "Welcome", "Hi there!", "Hey!"],
+      "how are you": ["I'm good, thanks!", "Doing well, how about you?", "All good on my end!"],
+      "what are bit's major engineering programs":["The key undergraduate programs offered at BAIT Sathy include B.Tech. in Computer Science and Engineering, Electronics and Communication Engineering, Mechanical Engineering, Civil Engineering, Electrical and Electronics Engineering, and Information Technology. The main postgraduate programs are M.Tech. in various engineering specializations"],
+      "how do students apply to bit":["The admission to BAIT's engineering programs is primarily based on performance in the Joint Entrance Examination (JEE) Main. The institute also considers Class 12 board exam scores and has its own entrance test for some programs. The application deadlines are usually in the months of May-June for the upcoming academic year."],
+      "describe BAIT's campus facilities and resources":["BAIT Sathy campus has well-equipped engineering labs, workshops, and computing facilities. It also has a central library, sports complex, hostels, and other student amenities on the sprawling 150-acre campus."],
+      "what is BAIT's placement record like":["BAIT has consistently maintained a strong placement record, with top companies recruiting its graduates. The average CTC offered to BAIT Sathy students is competitive compared to other premier engineering colleges in Tamil Nadu."],
+      "how old are you": ["I'm an AI, so I don't have an age!"],
+  "what is your name": ["My name is Chatbit."],
+  "what is the weather today": ["I'm sorry, I don't have access to real-time weather information."],
+  "tell me a joke": ["Why don't scientists trust atoms? Because they make up everything!"],
+  "who is your creator": ["I was created by a team of developers at OpenAI."],
+  "what is the meaning of life": ["The meaning of life is subjective and can vary for each individual."],
+  "thank you": ["You're welcome!", "No problem!", "Glad I could help!"],
+  "how can I learn programming": ["Learning programming involves practice, studying resources, and building projects. Start with a beginner-friendly language like Python and explore online tutorials and courses. Practice regularly and work on small projects to reinforce your learning."],
+  "what is the capital of France": ["The capital of France is Paris."],
+  "tell me a fun fact": ["Did you know that honey never spoils? Archaeologists have found pots of honey in ancient Egyptian tombs that are over 3,000 years old and still perfectly edible!"],
+  "can you recommend a good book": ["Sure! What genre are you interested in?"],
+  "what is artificial intelligence": ["Artificial Intelligence (AI) refers to the development of computer systems that can perform tasks that typically require human intelligence. It encompasses various techniques such as machine learning, natural language processing, computer vision, and more."],
+      "highlight BAIT's research and industry collaborations":["BAIT Sathy is involved in various sponsored research projects and collaborates with industries on technology development and consultancy. The institute also has an active entrepreneurship cell to promote start-up culture among students."],
+      "what extracurricular activities occur at BAIT":["The campus has several active student clubs, technical societies, and cultural organizations that organize festivals, competitions, and other extracurricular activities throughout the year."],
+      "outline BAIT's on-campus accommodation options":["BAIT Sathy provides on-campus hostel accommodation for both male and female students with modern amenities. The campus also has a cafeteria, banking facilities, and healthcare center."],
+      "does BAIT offer interdisciplinary programs":["In addition to the core engineering programs, BAIT Sathy offers interdisciplinary B.Tech. programs in Artificial Intelligence and Machine Learning, and Data Science and Engineering."],
+      "what is BAIT's faculty profile like":["The BAIT faculty comprises experienced academicians and industry experts. The student-faculty ratio is maintained at a reasonable level to ensure personalized attention and mentorship."],
+      "explain BAIT's scholarships and fee structure":["BAIT Sathy offers various scholarships and fee concessions to meritorious students and those from economically weaker sections of society. The fee structure is aligned with other top engineering colleges in the region."],
+      "what is cut off marks for Bannari Amman college":["The expected Bannari Amman Institute of Technology TNEA cutoff 2024 for the general category students is between 150 and 200, and for the SC category is between 70 and 180."],
+      "is mobile allowed in bannari Amman college":["Yes, mobile phones are allowed in Bannari Amman College erode or any other college. College students often need mobile phones for project work ,notes etc so mobile phones are allowed in college and there is no problem in that."],
+      "what is the highest salary package of Bannari Amman college":["Companies such as Cadence and Informatica offered salary package of INR 16 LPA and NR 11.5 LPA, respectively during Bannari Amman Institute of Technology placements 2024. Earlier, the highest package offered during placements 2023 drive was INR 44 LPA."],
+      "what is the dress code for bannari Amman Institute of Technology":["Casual attire: For regular classes and day-to-day activities, casual wear is generally acceptable. This may include comfortable clothing such as jeans, t-shirts, blouses, skirts, and dresses, as long as they are modest and appropriate."]
+
+};
+
+    let conversationHistory = JSON.parse(localStorage.getItem('conversationHistory')) || [];
+
+    function getRandomResponse(key) {
+      const possibleResponses = responses[key] || ["Sorry, I don't understand.", "Could you please repeat that?"];
+      return possibleResponses[Math.floor(Math.random() * possibleResponses.length)];
+    }
+
+    function sendMessage() {
+      const userInput = document.getElementById("userInput").value.trim().toLowerCase();
+      if (!userInput) return; // Exit early if input is empty
+
+      appendMessage("user-message", `You: ${userInput}`);
+
+      const chatbotResponse = getRandomResponse(userInput);
+      appendMessage("chatbot-message", `Chatbot: ${chatbotResponse}`);
+
+      conversationHistory.push({ type: 'user', message: userInput });
+      conversationHistory.push({ type: 'chatbot', message: chatbotResponse });
+      localStorage.setItem('conversationHistory', JSON.stringify(conversationHistory));
+
+      document.getElementById("userInput").value = "";
+    }
+
+    function appendMessage(className, message) {
+      const chatbox = document.getElementById("chatbox");
+      const newMessage = document.createElement("p");
+      newMessage.className = className;
+      newMessage.textContent = message;
+      chatbox.appendChild(newMessage);
+
+      chatbox.scrollTop = chatbox.scrollHeight;
+    }
+
+    window.onload = function() {
+      conversationHistory.forEach(item => {
+        const className = item.type === 'user' ? 'user-message' : 'chatbot-message';
+        appendMessage(className, `${item.type === 'user' ? 'You' : 'Chatbot'}: ${item.message}`);
+      });
+    };
+  </script>
+</body>
+</html>
