@@ -1,2 +1,2 @@
 username = admin
-password = aunbit
+password = arunbit
